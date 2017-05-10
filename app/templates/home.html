@@ -1,1 +1,4 @@
 <h1 ng-repeat="room in room.rooms ">{{room.$value}}</h1>
+<div ng-controller="ModalCtrl as modal">
+    <button ng-click= "modal.open()">New room</button>
+</div>

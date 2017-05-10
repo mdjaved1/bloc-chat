@@ -1,1 +1,6 @@
-<form ng-submit="submit()" ng-controller="ModalCtrl as modal">Click this </form>
+<form ng-submit="modal.ok()">
+    <input type="text" ng-model="modal.name" autofocus>{{modal.name}}
+    <br>
+    <button ng-click = "modal.cancel()">cancel</button>
+    <button ng-click="modal.ok()">Ok</button>
+</form>

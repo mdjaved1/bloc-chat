@@ -1,26 +1,27 @@
 (function() {
     function ModalCtrl($uibModal,$log,Room) {
-        this.open(){
+        this.open= function(){
             var modalInstance = $uibModal.open({
-                animation: true ,
-                controller: 'ModalCtrl as modal',
+                animation: this.animationsEnabled ,
+                controller: 'ModalInstanceCtrl as modal',
                 templateUrl: '/templates/modal.html'
-                
-                modalInstance.result.then(firstFunction(name){
-                    this.room = name;
-                    Room.create(this.room);
-                
-                }, 
-                secondFunction(){
-                    console.log("dismissed")                           
-                                               
-                });
-                
-            
             });
+                
+            modalInstance.result.then(function(name){
+                this.room = name;
+                Room.create(this.room);
+
+            }, 
+            function(){
+                console.log("dismissed")                           
+
+            });
+
+            
+            
        }
         
-        this.toggleAnimation(){
+        this.toggleAnimation= function(){
             if(this.animationsEnabled === true){
                 this.animationsEnabled = false ;
             }else{
