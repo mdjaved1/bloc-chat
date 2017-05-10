@@ -8,8 +8,9 @@
     Room.all = rooms;
 
     Room.add = function(room) {
-        //Use the firebase method $add here
-        room.$add({});
+        room.$add({
+            rooms ;
+        });
     } 
 
     return Room;
