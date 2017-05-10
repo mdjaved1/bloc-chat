@@ -1,5 +1,5 @@
 (function() {
-    function config($locationProvider, $stateProvider) {
+    function config($locationProvider, $stateProvider,$uibModal) {
          $locationProvider
              .html5Mode({
                  enabled: true,
@@ -13,8 +13,12 @@
                 templateUrl: '/templates/home.html'
 
              });
+        $uibModal
+            .open({
+            
+        })
      }
      angular
-         .module('blocChat', ['ui.router', 'firebase'])
+         .module('blocChat', ['ui.router', 'firebase','ui.bootstrap'])
          .config(config);
 })();
