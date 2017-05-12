@@ -23,7 +23,7 @@
             })
             modalInstance.result.then(function(username){
                  this.username = username ;
-                 $uibModalInstance.close();
+                 $cookies.put('blocChatCurrentUser', this.username)
                 })
         }
     } 
