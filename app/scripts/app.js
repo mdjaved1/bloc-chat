@@ -21,6 +21,10 @@
               templateUrl: '/templates/usernamemodal.html',
               controller: 'UserModalInstanceCtrl'
             })
+            modalInstance.result.then(function(username){
+                 this.username = username ;
+                 $uibModalInstance.close();
+                })
         }
     } 
      angular
