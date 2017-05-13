@@ -1,7 +1,7 @@
 (function() {
     function UserModalInstanceCtrl($uibModalInstance) {
-         this.ok = function(){
-            this.username = {name:""};
+         $scope.ok = function(){
+            this.name($scope.username) = {name:""};
             $uibModalInstance.close(this.name);
         };
     }

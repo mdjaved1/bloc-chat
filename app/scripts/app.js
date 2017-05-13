@@ -19,7 +19,7 @@
         if (!currentUser || currentUser === '') {
            var modalInstance = $uibModal.open({
               templateUrl: '/templates/usernamemodal.html',
-              controller: 'UserModalInstanceCtrl'
+              controller: 'UserModalInstanceCtrl as modalUN'
             })
             modalInstance.result.then(function(username){
                  this.username = username ;
