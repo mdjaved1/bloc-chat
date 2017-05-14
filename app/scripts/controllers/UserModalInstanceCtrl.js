@@ -1,12 +1,10 @@
 (function() {
-    function UserModalInstanceCtrl($uibModalInstance) {
+    function UserModalInstanceCtrl($uibModalInstance,$scope) {
          $scope.ok = function(){
-            this.name($scope.username) = {name:""};
-            $uibModalInstance.close(this.name);
+            $uibModalInstance.close($scope.username);
         };
     }
 
     angular
-        .module('blocChat')
-        .controller('UserModalInstanceCtrl'["$uibModalInstance",UserModalInstanceCtrl]);
+        .module('blocChat')        .controller('UserModalInstanceCtrl'["$uibModalInstance","$scope",UserModalInstanceCtrl]);
 })();

@@ -19,7 +19,7 @@
         if (!currentUser || currentUser === '') {
            var modalInstance = $uibModal.open({
               templateUrl: '/templates/usernamemodal.html',
-              controller: 'UserModalInstanceCtrl as modalUN'
+              controller: 'UserModalInstanceCtrl as modal'
             })
             modalInstance.result.then(function(username){
                  this.username = username ;
@@ -28,7 +28,7 @@
         }
     } 
      angular
-         .module('blocChat', ['ui.router', 'firebase','ui.bootstrap',"ngCookies"])
-         .config(config);
+         .module('blocChat', ['ui.router', 'firebase','ui.bootstrap','ngCookies'])
+         .config(config)
          .run(['$cookies', BlocChatCookies]);   
 })();
