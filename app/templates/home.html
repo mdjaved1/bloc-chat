@@ -13,4 +13,8 @@
             <td class="timestamp">{{message.sentAt}}</td>
         </tr>
     </table>
+    <form ng-submit = "room.send(room.message,currentRoom)">
+        <input type = "text" ng-model = "room.message">
+        <button>Message</button>
+    </form>
 </div>

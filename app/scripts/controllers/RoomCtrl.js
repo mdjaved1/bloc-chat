@@ -5,7 +5,9 @@
             $scope.currentRoom = newRoom ;
             $scope.messages = Message.getByRoomId(newRoom.$id);
         }
+       this.send = Message.send;
     }
+    
    
 
     angular
