@@ -1,8 +1,9 @@
 <div class="modal-body">
-    <form ng-submit="ok()">
-        <input class="form-control finderBar" type="text" ng-model="modal.name" autofocus>
+    UserName
+    <form ng-submit="ok(Username.$valid)" name = "Username">
+        <input class="form-control finderBar" type="text" ng-model="username" autofocus required ng-minlength = "1">
     </form>
     <br>
-    <button ng-click="ok()">Ok</button>
+    <button ng-click="ok(Username.$valid)">Ok</button>
     
 </div>
