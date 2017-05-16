@@ -9,3 +9,26 @@
  display: table;
  content: " ";
 }
+.leftSide{
+    width : 15% ;
+    float : left;
+    background-color: red;
+}
+.rightSide{
+    width : 85%;
+    float : right;
+    background-color: yellow;
+}
+.timestamp{
+    border: solid black 1px;
+    right: 0;
+    
+}
+.content{
+    width: 90%;
+    
+    
+}
+.messagetable{
+    width: 100%;
+}

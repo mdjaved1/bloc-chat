@@ -1,9 +1,16 @@
-<h1 ng-repeat=" thisroom in room.rooms "><p ng-click ="room.changeRoom(thisroom)">{{thisroom.$value}}</p>
-</h1>
-<div ng-controller="ModalCtrl as modal">
-    <button ng-click= "modal.open()">New room</button>
+<div class = "leftSide">
+    <h1 class="roomList" ng-repeat=" thisroom in room.rooms "><p ng-click ="room.changeRoom(thisroom)">{{thisroom.$value}}</p>
+    </h1>
+    <div ng-controller="ModalCtrl as modal">
+        <button ng-click= "modal.open()">New room</button>
+    </div>
+</div> 
+<div class = "rightSide">
+    <h2 >{{currentRoom.$value}}</h2>
+    <table class="messagetable">
+        <tr ng-repeat = "message in messages track by $index">
+            <td class = "content">{{message.username}}: {{message.content}}</td>
+            <td class="timestamp">{{message.sentAt}}</td>
+        </tr>
+    </table>
 </div>
-<h2>{{currentRoom.$value}}</h2>
-<table>
-    <tr ng-repeat = "message in messages track by $index"><td>{{message.username}}: {{message.content}}</td></tr>
-</table>
